@@ -20,7 +20,6 @@ const Container = styled.div`
   font-family: "Montserrat", sans-serif;
   z-index: 9999;
   background-color: #f1f8ea;
-  ${mobile({ padding: "0px", flexDirection: "column" })}
 `;
 
 const slideInAnimation = keyframes`
@@ -39,6 +38,7 @@ const TopLeft = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${mobile({ flex: "1", justifyContent: "flex-start", paddingLeft: "16px" })}
 `;
 
 const SocialContainer = styled.div`
@@ -58,6 +58,7 @@ const SocialIcon = styled.a`
   justify-content: center;
   margin-right: 10px;
   cursor: pointer;
+  ${mobile({ width: "30px", height: "30px", margin: "3px" })}
 `;
 
 const TopCenter = styled.div`
@@ -77,15 +78,7 @@ const TopListItem = styled.li`
   font-size: 18px;
   font-weight: 300;
   cursor: pointer;
-  @media (max-width: 768px) {
-    margin-right: 20px;
-    font-size: 16px;
-  }
-
-  @media (max-width: 576px) {
-    margin-right: 10px;
-    font-size: 14px;
-  }
+  ${mobile({ margin: "5px", fontSize: "14px" })}
 `;
 
 const TopRight = styled.div`
@@ -93,6 +86,7 @@ const TopRight = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({ justifyContent: "center", display: "none" })}
 `;
 
 const SearchContainer = styled.div`
@@ -117,15 +111,12 @@ const Input = styled.input`
   }
 `;
 
-const TopRightIcon = styled.button`
+const TopRightIcon = styled.div`
   font-size: ${iconSize};
   color: #666;
   cursor: pointer;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 10px;
   padding: 0.5rem;
-  margin-top: 15px;
-  margin-bottom: 15px;
 `;
 
 const DropdownContainer = styled.div`
@@ -180,6 +171,13 @@ const TopBar = () => {
   const handleSelectResult = (result) => {
     setSearchQuery(result.title);
     setSearchResults([]);
+
+    // Construct the URL based on the selected result's id
+    //const guideURL = `/guide/${result.id}`;
+
+    // Use the useNavigate hook to navigate to the guide's detail page
+    //const navigate = useNavigate();
+    //navigate(guideURL);
   };
 
   const handleClickOutside = (event) => {

@@ -133,7 +133,7 @@ const CompartmentBox2 = () => {
             </Description>
             <ReadMoreButton>
               <Link
-                to="/guidepage"
+                to="/start-a-small-business"
                 style={{ textDecoration: "none", color: "inherit" }}
                 onClick={handleClick}
               >
@@ -154,7 +154,7 @@ const CompartmentBox2 = () => {
             </Description>
             <ReadMoreButton>
               <Link
-                to="/guidepage1"
+                to="/affiliate-marketing"
                 style={{ textDecoration: "none", color: "inherit" }}
                 onClick={handleClick}
               >
@@ -175,7 +175,7 @@ const CompartmentBox2 = () => {
             </Description>
             <ReadMoreButton>
               <Link
-                to="/guidepage2"
+                to="/transcription-jobs"
                 style={{ textDecoration: "none", color: "inherit" }}
                 onClick={handleClick}
               >
@@ -198,7 +198,7 @@ const CompartmentBox2 = () => {
             </Description>
             <ReadMoreButton>
               <Link
-                to="/guidepage3"
+                to="/forex-trading"
                 style={{ textDecoration: "none", color: "inherit" }}
                 onClick={handleClick}
               >
@@ -219,7 +219,7 @@ const CompartmentBox2 = () => {
             </Description>
             <ReadMoreButton>
               <Link
-                to="/guidepage4"
+                to="/crypto-in-kenya"
                 style={{ textDecoration: "none", color: "inherit" }}
                 onClick={handleClick}
               >
@@ -240,7 +240,7 @@ const CompartmentBox2 = () => {
             </Description>
             <ReadMoreButton>
               <Link
-                to="/guidepage5"
+                to="/passive-income"
                 style={{
                   textDecoration: "none",
                   color: "inherit",

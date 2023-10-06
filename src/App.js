@@ -22,18 +22,21 @@ function App() {
         <TopBar />
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/standardpage" element={<StandardPage />} />
-          <Route path="/standardpage1" element={<StandardPage1 />} />
-          <Route path="/standardpage2" element={<StandardPage2 />} />
-          <Route path="/standardpage3" element={<StandardPage3 />} />
-          <Route path="/standardpage4" element={<StandardPage4 />} />
-          <Route path="/standardpage5" element={<StandardPage5 />} />
-          <Route path="/guidepage" element={<GuidePage />} />
-          <Route path="/guidepage1" element={<GuidePage1 />} />
-          <Route path="/guidepage2" element={<GuidePage2 />} />
-          <Route path="/guidepage3" element={<GuidePage3 />} />
-          <Route path="/guidepage4" element={<GuidePage4 />} />
-          <Route path="/guidepage5" element={<GuidePage5 />} />
+          <Route path="/freelancing-in-kenya" element={<StandardPage />} />
+          <Route path="/dropshipping" element={<StandardPage1 />} />
+          <Route path="/start-a-blog" element={<StandardPage2 />} />
+          <Route
+            path="/freelance-writing-in-kenya"
+            element={<StandardPage3 />}
+          />
+          <Route path="/iq-option-review" element={<StandardPage4 />} />
+          <Route path="/start-a-baby-shop" element={<StandardPage5 />} />
+          <Route path="/start-a-small-business" element={<GuidePage />} />
+          <Route path="/affiliate-marketing" element={<GuidePage1 />} />
+          <Route path="/transcription-jobs" element={<GuidePage2 />} />
+          <Route path="/forex-trading" element={<GuidePage3 />} />
+          <Route path="/crypto-in-kenya" element={<GuidePage4 />} />
+          <Route path="/passive-income" element={<GuidePage5 />} />
         </Routes>
         <Contact />
       </div>

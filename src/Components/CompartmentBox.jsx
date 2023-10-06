@@ -17,11 +17,7 @@ const Container = styled.div`
   margin-right: 104px;
   margin-left: 104px;
   background-color: #f1f8ea; /* Light green background */
-  ${mobile({ padding: "16px", flexDirection: "column" })}
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    margin: 32px;
-  }
+  ${mobile({ flexDirection: "column", margin: "24px" })}
 `;
 
 const DescContainer = styled.div`
@@ -53,7 +49,6 @@ const Column = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  ${mobile({ flexDirection: "row", alignItems: "stretch" })}
 `;
 
 const Box = styled.div`
@@ -66,7 +61,6 @@ const Box = styled.div`
   height: 200px;
   text-align: center;
   border: 1px solid #ccc;
-  ${mobile({ flexDirection: "row", alignItems: "stretch" })}
 `;
 
 const IconContainer = styled.i`
@@ -137,11 +131,11 @@ const CompartmentBox = () => {
           </Description>
           <LearnMoreLink href="#">
             <Link
-              to="/standardpage"
+              to="/freelancing-in-kenya"
               style={{ textDecoration: "none", color: "inherit" }}
               onClick={handleClick}
             >
-              Learn More
+              Read More
             </Link>
           </LearnMoreLink>
         </Box>
@@ -155,11 +149,11 @@ const CompartmentBox = () => {
           </Description>
           <LearnMoreLink href="#">
             <Link
-              to="/standardpage1"
+              to="/dropshipping"
               style={{ textDecoration: "none", color: "inherit" }}
               onClick={handleClick}
             >
-              Learn More
+              Read More
             </Link>
           </LearnMoreLink>
         </Box>
@@ -173,11 +167,11 @@ const CompartmentBox = () => {
           </Description>
           <LearnMoreLink href="#">
             <Link
-              to="/standardpage2"
+              to="/start-a-blog"
               style={{ textDecoration: "none", color: "inherit" }}
               onClick={handleClick}
             >
-              Learn More
+              Read More
             </Link>
           </LearnMoreLink>
         </Box>
@@ -193,11 +187,11 @@ const CompartmentBox = () => {
           </Description>
           <LearnMoreLink href="#">
             <Link
-              to="/standardpage3"
+              to="/freelance-writing-in-kenya"
               style={{ textDecoration: "none", color: "inherit" }}
               onClick={handleClick}
             >
-              Learn More
+              Read More
             </Link>
           </LearnMoreLink>
         </Box>
@@ -212,11 +206,11 @@ const CompartmentBox = () => {
           </Description>
           <LearnMoreLink href="#">
             <Link
-              to="/standardpage4"
+              to="/iq-option-review"
               style={{ textDecoration: "none", color: "inherit" }}
               onClick={handleClick}
             >
-              Learn More
+              Read More
             </Link>
           </LearnMoreLink>
         </Box>
@@ -230,11 +224,11 @@ const CompartmentBox = () => {
           </Description>
           <LearnMoreLink href="#">
             <Link
-              to="/standardpage5"
+              to="/start-a-baby-shop"
               style={{ textDecoration: "none", color: "inherit" }}
               onClick={handleClick}
             >
-              Learn More
+              Read More
             </Link>
           </LearnMoreLink>
         </Box>
