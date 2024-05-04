@@ -14,6 +14,8 @@ import GuidePage2 from "./Pages/GuidePage2";
 import GuidePage3 from "./Pages/GuidePage3";
 import GuidePage5 from "./Pages/GuidePage4";
 import GuidePage4 from "./Pages/GuidePage5";
+import StandardPage6 from "./Pages/StandardPage6";
+import StandardPage7 from "./Pages/StandardPage7";
 
 function App() {
   return (
@@ -31,6 +33,11 @@ function App() {
           />
           <Route path="/iq-option-review" element={<StandardPage4 />} />
           <Route path="/start-a-baby-shop" element={<StandardPage5 />} />
+          <Route
+            path="/top-kenyan-hairstyles-for-ladies"
+            element={<StandardPage6 />}
+          />
+          <Route path="/forex" element={<StandardPage7 />} />
           <Route path="/start-a-small-business" element={<GuidePage />} />
           <Route path="/affiliate-marketing" element={<GuidePage1 />} />
           <Route path="/transcription-jobs" element={<GuidePage2 />} />

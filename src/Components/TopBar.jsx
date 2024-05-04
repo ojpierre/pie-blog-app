@@ -17,7 +17,7 @@ const Container = styled.div`
   top: 0;
   display: flex;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   z-index: 9999;
   background-color: #f1f8ea;
 `;

@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import WorkIcon from "@mui/icons-material/Work";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import CreateIcon from "@mui/icons-material/Create";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import ChildFriendlyIcon from "@mui/icons-material/ChildFriendly";
-import { mobile } from "../responsive.jsx";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -17,7 +15,11 @@ const Container = styled.div`
   margin-right: 104px;
   margin-left: 104px;
   background-color: #f1f8ea; /* Light green background */
-  ${mobile({ flexDirection: "column", margin: "24px" })}
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin: 24px;
+  }
 `;
 
 const DescContainer = styled.div`
@@ -61,6 +63,11 @@ const Box = styled.div`
   height: 200px;
   text-align: center;
   border: 1px solid #ccc;
+
+  @media screen and (max-width: 768px) {
+    margin: 8px;
+    width: auto;
+  }
 `;
 
 const IconContainer = styled.i`
@@ -80,12 +87,10 @@ const Title = styled.h2`
 `;
 
 const Description = styled.p`
-  display: flex;
-  flex-wrap: wrap;
   font-size: 14px;
   color: #666;
   font-family: "Montserrat", sans-serif;
-  margin-top: 24px;
+  margin-top: 16px; /* Adjusted margin */
 `;
 
 const LearnMoreLink = styled.button`
@@ -96,7 +101,8 @@ const LearnMoreLink = styled.button`
   cursor: pointer;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
-  margin-top: 24px;
+  margin-top: 16px; /* Adjusted margin */
+
   &:hover {
     background-color: #ccc;
   }
@@ -104,13 +110,12 @@ const LearnMoreLink = styled.button`
 
 const CompartmentBox = () => {
   const navigate = useNavigate();
-  const handleClick = () => {
-    // Scroll to the top of the page
-    window.scrollTo(0, 0);
 
-    // Navigate to the new page using the navigate object
+  const handleClick = () => {
+    window.scrollTo(0, 0);
     navigate.push("/new-page");
   };
+
   return (
     <Container>
       <DescContainer>
@@ -129,7 +134,7 @@ const CompartmentBox = () => {
           <Description>
             How to start freelancing in Kenya and make money online.
           </Description>
-          <LearnMoreLink href="#">
+          <LearnMoreLink>
             <Link
               to="/freelancing-in-kenya"
               style={{ textDecoration: "none", color: "inherit" }}
@@ -147,7 +152,7 @@ const CompartmentBox = () => {
           <Description>
             Learn exactly how to start a dropshipping business in Kenya.
           </Description>
-          <LearnMoreLink href="#">
+          <LearnMoreLink>
             <Link
               to="/dropshipping"
               style={{ textDecoration: "none", color: "inherit" }}
@@ -165,7 +170,7 @@ const CompartmentBox = () => {
           <Description>
             This tutorial will teach you how to start a blog in Kenya.
           </Description>
-          <LearnMoreLink href="#">
+          <LearnMoreLink>
             <Link
               to="/start-a-blog"
               style={{ textDecoration: "none", color: "inherit" }}
@@ -185,7 +190,7 @@ const CompartmentBox = () => {
           <Description>
             Do you want to become a freelance writer in Kenya? Here's how.
           </Description>
-          <LearnMoreLink href="#">
+          <LearnMoreLink>
             <Link
               to="/freelance-writing-in-kenya"
               style={{ textDecoration: "none", color: "inherit" }}
@@ -204,7 +209,7 @@ const CompartmentBox = () => {
             This review will walk you through what I know and have experienced
             on this online trading platform.
           </Description>
-          <LearnMoreLink href="#">
+          <LearnMoreLink>
             <Link
               to="/iq-option-review"
               style={{ textDecoration: "none", color: "inherit" }}
@@ -222,7 +227,7 @@ const CompartmentBox = () => {
           <Description>
             How to start a successful baby shop in Kenya: a step-by-step guide.
           </Description>
-          <LearnMoreLink href="#">
+          <LearnMoreLink>
             <Link
               to="/start-a-baby-shop"
               style={{ textDecoration: "none", color: "inherit" }}

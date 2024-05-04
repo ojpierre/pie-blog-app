@@ -120,8 +120,8 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_vkdbib2",
-        "template_1r5o0tq",
+        "service_30z62ts",
+        "template_issfzkf",
         formRef.current,
         "CumNNoNYD7luBxHEq"
       )
@@ -145,15 +145,11 @@ const Contact = () => {
           <InfoContainer style={{ fontFamily: "Montserrat" }}>
             <ContactItem>
               <RoomIcon style={{ marginRight: "10px" }} />
-              622 Dixil Street, Nairobi CBD
-            </ContactItem>
-            <ContactItem>
-              <PhoneIcon style={{ marginRight: "10px" }} />
-              +254799538923
+              Nairobi
             </ContactItem>
             <ContactItem>
               <MailOutlineIcon style={{ marginRight: "10px" }} />
-              pierreouma@gmail.com
+              sharevalueke@gmail.com
             </ContactItem>
           </InfoContainer>
           <SocialContainer>

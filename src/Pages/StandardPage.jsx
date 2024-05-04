@@ -7,7 +7,11 @@ const AllContainer = styled.div``;
 const PageContainer = styled.div`
   padding: 20px;
   background-color: #f1f8ea; /* Light green background */
-  margin: 104px;
+  margin: 2%;
+
+  @media (min-width: 768px) {
+    margin: 4%;
+  }
 `;
 
 const HeadContainer = styled.div`
@@ -20,6 +24,10 @@ const Header = styled.h1`
   font-weight: bold;
   margin-bottom: 20px;
   font-family: "Montserrat", sans-serif;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 const BlogContainer = styled.div`
@@ -46,9 +54,13 @@ const BlogImage = styled.img`
   width: 100%;
   margin-bottom: 10px;
   animation: ${fadeIn} 0.5s ease-in; /* Fade-in animation */
-  height: 100vh;
-  margin-top: 80px;
+  height: auto;
+  margin-top: 5%;
   object-fit: cover;
+
+  @media (min-width: 768px) {
+    margin-top: 80px;
+  }
 `;
 
 const BlogDate = styled.p`
@@ -65,6 +77,10 @@ const SectionTitle = styled.h2`
   font-size: 18px;
   margin-bottom: 10px;
   font-family: "Poppins", sans-serif;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 const SectionContent = styled.p`
@@ -125,6 +141,11 @@ const SectionContentContainer = styled.div`
   animation: ${slideUp} 0.5s ease-in; /* Slide-up animation */
 `;
 
+const formatDate = (date) => {
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return date.toLocaleDateString(undefined, options);
+};
+
 const StandardPage = () => {
   const renderTableOfContents = (sections) => {
     const tocItems = sections.map((section, index) => (
@@ -142,6 +163,8 @@ const StandardPage = () => {
   };
 
   const renderSections = () => {
+    const currentDate = new Date(); // Get the current date
+
     return contentData.map((item, index) => (
       <React.Fragment key={index}>
         <AllContainer style={{ margin: "52px" }}>
@@ -149,7 +172,7 @@ const StandardPage = () => {
             <Header style={{ textDecoration: "underline", fontSize: "48px" }}>
               {item.htitle}
             </Header>
-            <BlogDate>Date: June 26, 2023</BlogDate>
+            <BlogDate> Last Updated: {formatDate(currentDate)} </BlogDate>
           </HeadContainer>
           <BlogContainer>
             <BlogImageContainer>
