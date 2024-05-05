@@ -5,7 +5,8 @@ import yara from "../Images/yara.jpg";
 import ArrowLeftOutlined from "@mui/icons-material/ArrowBackIosSharp";
 import ArrowRightOutlined from "@mui/icons-material/ArrowForwardIosOutlined";
 import { Link } from "react-router-dom";
-import brokerImage from "../Images/brokerImage.png";
+import brokerImage from "../Images/forexTrading.webp";
+import cryptocurrencyImage from "../Images/cryptocurrencyImage.png";
 
 const Container = styled.div`
   margin-top: 60px;
@@ -169,6 +170,7 @@ const Header = () => {
     "Freelancing in Kenya",
     "Fashion and Style",
     "Forex Trading",
+    "Cryptocurrency",
   ]);
 
   const totalSlides = titles.length; // Update to reflect the total number of slides
@@ -220,6 +222,13 @@ const Header = () => {
               style={{ objectFit: "cover" }}
             />
           </SlideshowImageWrapper>
+          <SlideshowImageWrapper to="/crypto-markets" totalSlides={totalSlides}>
+            <SlideshowImage
+              src={cryptocurrencyImage}
+              alt={`Slide 4`}
+              style={{ objectFit: "cover" }}
+            />
+          </SlideshowImageWrapper>
         </SlideshowImages>
         <Controls>
           <Arrow onClick={prevSlide} style={{ marginLeft: 0 }}>
@@ -234,6 +243,7 @@ const Header = () => {
         <Dot active={activeSlide === 0} onClick={() => setActiveSlide(0)} />
         <Dot active={activeSlide === 1} onClick={() => setActiveSlide(1)} />
         <Dot active={activeSlide === 2} onClick={() => setActiveSlide(2)} />
+        <Dot active={activeSlide === 3} onClick={() => setActiveSlide(3)} />
       </DotsContainer>
       <HeaderTitles>
         <HeaderTitleSm>{titles[activeSlide]}</HeaderTitleSm>

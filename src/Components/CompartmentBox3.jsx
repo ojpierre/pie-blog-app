@@ -5,17 +5,27 @@ import { useNavigate } from "react-router-dom";
 import { Box, Paper, Typography } from "@mui/material";
 import yara from "../Images/yara.jpg";
 import brokerImage from "../Images/brokerImage.png";
+import bookCoverImage from "../Images/bookCoverImage.webp";
+import cryptoMarketImage from "../Images/cryptoMarketImage.png";
 
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  justify-items: center;
+  margin: 24px auto;
+  max-width: 1200px;
+`;
 const BoxContainer = styled(Paper)`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 24px;
   padding: 16px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  max-width: 400px; /* Limit the box width */
-  margin: 0 auto; /* Center the box horizontally */
+  width: 350px; /* Set a fixed width for the box container */
+  height: 250px; /* Set a fixed height for the box container */
+  margin: 24px;
+  text-align: left; /* Align text to the left */
 
   &:hover {
     transform: scale(1.05);
@@ -23,18 +33,22 @@ const BoxContainer = styled(Paper)`
   }
 
   @media screen and (max-width: 768px) {
-    height: 300px;
+    width: 250px; /* Adjust width for smaller screens if needed */
+    height: 350px; /* Adjust height for smaller screens if needed */
   }
 `;
 
 const BoxImage = styled.img`
   width: 150px;
   height: 150px;
-  object-fit: cover;
-  margin-right: 16px;
+  object-fit: contain;
+  margin-right: 16px; /* Add margin to separate the image from the text */
 `;
 
-const BoxContent = styled(Box)``;
+const BoxContent = styled(Box)`
+  display: flex;
+  flex-direction: column;
+`;
 
 const BoxTitle = styled(Typography)`
   font-size: 20px;
@@ -62,7 +76,7 @@ const CompartmentBox3 = () => {
   };
 
   return (
-    <>
+    <GridContainer>
       <Link to="/top-kenyan-hairstyles-for-ladies" onClick={handleClick}>
         <BoxContainer onClick={toggleTyping}>
           <BoxImage src={yara} alt="Image" />
@@ -70,7 +84,7 @@ const CompartmentBox3 = () => {
             <BoxTitle variant="h6">Top Kenyan Hairstyles For Ladies</BoxTitle>
             <BoxDescription variant="body1">
               {isTyping
-                ? "Discover the latest trends in Kenyan hairstyles for women and find the perfect look for any occasion."
+                ? "Discover the latest trends in Kenyan hairstyles."
                 : "Static content after typing"}
             </BoxDescription>
           </BoxContent>
@@ -89,7 +103,33 @@ const CompartmentBox3 = () => {
           </BoxContent>
         </BoxContainer>
       </Link>
-    </>
+      <Link to="/forex-risks" onClick={handleClick}>
+        <BoxContainer onClick={toggleTyping}>
+          <BoxImage src={bookCoverImage} alt="Image" />
+          <BoxContent>
+            <BoxTitle variant="h6">Risk Management in Forex</BoxTitle>
+            <BoxDescription variant="body1">
+              {isTyping
+                ? "Some of the well known Risk Management Strategies"
+                : "Static content after typing"}
+            </BoxDescription>
+          </BoxContent>
+        </BoxContainer>
+      </Link>
+      <Link to="/crypto-markets" onClick={handleClick}>
+        <BoxContainer onClick={toggleTyping}>
+          <BoxImage src={cryptoMarketImage} alt="Image" />
+          <BoxContent>
+            <BoxTitle variant="h6">Trending Crypto Markets in 2024</BoxTitle>
+            <BoxDescription variant="body1">
+              {isTyping
+                ? "Find the trending crypto markets of 2024 in correct order"
+                : "Static content after typing"}
+            </BoxDescription>
+          </BoxContent>
+        </BoxContainer>
+      </Link>
+    </GridContainer>
   );
 };
 

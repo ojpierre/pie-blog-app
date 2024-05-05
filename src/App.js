@@ -16,6 +16,8 @@ import GuidePage5 from "./Pages/GuidePage4";
 import GuidePage4 from "./Pages/GuidePage5";
 import StandardPage6 from "./Pages/StandardPage6";
 import StandardPage7 from "./Pages/StandardPage7";
+import StandardPage8 from "./Pages/StandardPage8";
+import StandardPage9 from "./Pages/StandardPage9";
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
             element={<StandardPage6 />}
           />
           <Route path="/forex" element={<StandardPage7 />} />
+          <Route path="/forex-risks" element={<StandardPage8 />} />
+          <Route path="/crypto-markets" element={<StandardPage9 />} />
           <Route path="/start-a-small-business" element={<GuidePage />} />
           <Route path="/affiliate-marketing" element={<GuidePage1 />} />
           <Route path="/transcription-jobs" element={<GuidePage2 />} />
